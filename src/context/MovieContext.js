@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { createContext, useState, useEffect } from "react";
-import axios from "axios";
+import { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
 
 export const MovieContext = createContext();
 
@@ -19,7 +19,7 @@ export const MovieProvider = ({ children }) => {
         setMovies(response.data.results);
         setLoading(false);
       } catch (err) {
-        setError("Failed to load movies");
+        setError('Failed to load movies');
         setLoading(false);
       }
     };

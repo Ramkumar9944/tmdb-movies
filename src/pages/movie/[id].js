@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import axios from "axios";
-import Image from "next/image";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import axios from 'axios';
+import Image from 'next/image';
 
 const MovieDetail = () => {
   const router = useRouter();
@@ -20,7 +20,7 @@ const MovieDetail = () => {
           setMovie(response.data);
           setLoading(false);
         } catch (err) {
-          setError("Failed to load movie details");
+          setError('Failed to load movie details');
           setLoading(false);
         }
       };
@@ -70,8 +70,8 @@ const MovieDetail = () => {
               </p>
 
               <p className='mb-4'>
-                <strong>Genres:</strong>{" "}
-                {movie.genres.map((genre) => genre.name).join(", ")}
+                <strong>Genres:</strong>{' '}
+                {movie.genres.map((genre) => genre.name).join(', ')}
               </p>
 
               <p className='mb-4'>
@@ -151,7 +151,7 @@ const MovieDetail = () => {
               <p>
                 {movie.production_countries
                   .map((country) => country.name)
-                  .join(", ")}
+                  .join(', ')}
               </p>
             </div>
 
@@ -161,7 +161,7 @@ const MovieDetail = () => {
               <p>
                 {movie.spoken_languages
                   .map((lang) => lang.english_name)
-                  .join(", ")}
+                  .join(', ')}
               </p>
             </div>
           </div>
