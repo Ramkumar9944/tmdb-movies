@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
+import Image from "next/image";
 
 const MovieDetail = () => {
   const router = useRouter();
@@ -49,7 +50,7 @@ const MovieDetail = () => {
 
           {/* Movie Info */}
           <div className="flex flex-wrap">
-            <img
+            <Image
               className="w-64 h-auto rounded-lg shadow-lg mr-8 mb-6"
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
@@ -92,7 +93,7 @@ const MovieDetail = () => {
                     Belongs to Collection:
                   </h3>
                   <div className="flex items-center">
-                    <img
+                    <Image
                       className="w-24 h-auto rounded-lg shadow-md mr-4"
                       src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection.poster_path}`}
                       alt={movie.belongs_to_collection.name}
@@ -130,7 +131,7 @@ const MovieDetail = () => {
                 {movie.production_companies.map((company) => (
                   <div key={company.id} className="text-center">
                     {company.logo_path && (
-                      <img
+                      <Image
                         className="w-16 h-auto mx-auto mb-2"
                         src={`https://image.tmdb.org/t/p/w500${company.logo_path}`}
                         alt={company.name}
