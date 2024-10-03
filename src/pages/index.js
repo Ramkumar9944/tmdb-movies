@@ -1,8 +1,8 @@
-"use client"; // Ensures this is a client-side component
+'use client'; // Ensures this is a client-side component
 
-import { useContext } from "react";
-import { MovieContext } from "../context/MovieContext";
-import MovieCard from "../components/MovieCard";
+import { useContext } from 'react';
+import { MovieContext } from '../context/MovieContext';
+import MovieCard from '../components/MovieCard';
 
 export default function Home() {
   const { movies, loading, error } = useContext(MovieContext);

@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-import { MovieProvider } from "../context/MovieContext";
+import '../styles/globals.css';
+import { MovieProvider } from '../context/MovieContext';
 
 function MyApp({ Component, pageProps }) {
   return (
