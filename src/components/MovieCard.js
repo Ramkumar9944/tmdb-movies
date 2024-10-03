@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const MovieCard = ({ movie }) => {
   return (
     <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
       <Link href={`/movie/${movie.id}`}>
-        <img
+        <Image
           className="w-full h-72 object-cover"
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
